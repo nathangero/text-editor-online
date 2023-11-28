@@ -14,13 +14,12 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
   // console.log("adding to db:", content);
 
   const jateDb = await openDB(DB_NAME, 1);
   const dbCount = await jateDb.count(DB_NAME, 1);
-  console.log("dbCount:", dbCount);
+  // console.log("dbCount:", dbCount);
   const transaction = jateDb.transaction(DB_NAME, 'readwrite');
   const store = transaction.objectStore(DB_NAME);
   
@@ -31,7 +30,6 @@ export const putDb = async (content) => {
   // console.log("saved to db:", result);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   // console.log("getting from db");
   
@@ -43,7 +41,7 @@ export const getDb = async () => {
   // console.log("got data:", result);
   // console.log("got data:", result[0].text);
 
-  return result[0].text;
+  return result[0].text; // Specifically return the text editor text
 };
 
 initdb();

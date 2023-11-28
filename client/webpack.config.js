@@ -37,7 +37,7 @@ module.exports = () => {
             src: path.resolve("src/images/logo.png"),
             destination: path.join('assets', 'icons'),
             type: "image/png",
-            sizes: "96x96",
+            sizes: [96, 128, 192, 256, 384, 512],
             purpose: "any maskable"
           }
         ]
@@ -51,7 +51,7 @@ module.exports = () => {
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource'
         },
         {

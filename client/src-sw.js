@@ -41,4 +41,3 @@ const imageCache = new CacheFirst({
 
 // Specifically name the path of the images
 registerRoute(({ request }) => request.destination === 'image', imageCache);
-// registerRoute(({ request }) => request.destination === 'image' && request.url.pathname.startsWith('src/images/'), imageCache);

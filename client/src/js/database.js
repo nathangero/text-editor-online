@@ -41,7 +41,7 @@ export const getDb = async () => {
   // console.log("got data:", result);
   // console.log("got data:", result[0].text);
 
-  return result[0].text; // Specifically return the text editor text
+  return result.length > 0 ? result[0].text : null; // Specifically return the text editor text if it exists, else return null
 };
 
 initdb();

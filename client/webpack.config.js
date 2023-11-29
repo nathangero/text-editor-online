@@ -25,6 +25,7 @@ module.exports = () => {
         swDest: "service-worker.js"
       }),
       new WebpackPwaManifest({
+        filename: "manifest.json",
         name: "Just Another Text Editor",
         short_name: "JATE",
         start_url: "./",
@@ -32,6 +33,7 @@ module.exports = () => {
         crossorigin: 'use-credentials',
         theme_color: '#272822',
         background_color: '#272822',
+        display: 'standalone',
         icons: [
           {
             src: path.resolve("src/images/logo.png"),

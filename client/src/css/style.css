@@ -80,6 +80,7 @@ h1 {
 
 .nav-btn {
   margin: 25px;
+  visibility: hidden; /* hide button on default if the PWA can't*/
 }
 
 .btn {
